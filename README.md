@@ -11,7 +11,7 @@ The test script has to check atleast five pages for the following:
 6. The contact information
 7. If the page has any images
 8. If the page has any videos
-9. Conduct and policy of the page
+9. Conduct and policy section
 10. Internship programs
 
 ### 1. Setting up the project
@@ -27,3 +27,12 @@ To create the project, you have to run the following commands in the terminal:
 - `npm install selenium-webdriver` <br />
 
 Create a javascript file in a new folder for writing the test script. 
+
+### 3. Tests
+#### i. First Test
+The first test will check the main page for the following:
+- Title of the page
+- Logo of the website <br/>
+
+The title of the page is displayed in the console.
+Presence of the logo is checked using `isDisplayed()` which returns a boolean value.
