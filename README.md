@@ -14,25 +14,30 @@ The test script has to check atleast five pages for the following:
 9. Conduct and policy section
 10. Internship programs
 
-### 1. Setting up the project
+## 1. Setting up the project
 To set up the project, you have to ensure that you have the following installed on your machine:
 - Node.js
 - npm
 - Selenium WebDriver
 - Chrome browser
 
-### 2. Create the project 
+## 2. Create the project 
 To create the project, you have to run the following commands in the terminal:
 - `npm init -y`
 - `npm install selenium-webdriver` <br />
 
 Create a javascript file in a new folder for writing the test script. 
 
-### 3. Tests
-#### i. First Test
+## 3. Tests
+### 1. First Test
 The first test will check the main page for the following:
 - Title of the page
 - Logo of the website <br/>
 
-The title of the page is displayed in the console.
+The title of the page is displayed in the console. <br/>
 Presence of the logo is checked using `isDisplayed()` which returns a boolean value.
+
+### 2. Second Test
+The second test will check the main page's navigation bar <br/>
+The navigation bar displays the list of links on the page. The test will click on the "Advisors and Patrons" link found in the "About Us" section.<br />
+Thereafter, the url will be displayed in the console.
