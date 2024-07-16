@@ -38,6 +38,7 @@ const{Browser}=require("selenium-webdriver");
   let currentURL = await driver.getCurrentUrl();
   console.log("Current URL: ", currentURL);
 
+
 } catch (error) {
   console.log("Error found! \n", error);
 }
