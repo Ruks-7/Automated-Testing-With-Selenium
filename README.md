@@ -39,5 +39,5 @@ Presence of the logo is checked using `isDisplayed()` which returns a boolean va
 
 ### 2. Second Test
 The second test will check the main page's navigation bar <br/>
-The navigation bar displays the list of links on the page. The test will click on the "Advisors and Patrons" link found in the "About Us" section.<br />
-Thereafter, the url will be displayed in the console.
+The navigation bar displays the list of links on the section. The test will click on the "Advisors and Patrons" link found in the "About Us" section.<br />
+Upon navigating to the page, the url of the page and all the advisors and patrons are displayed in the console.
