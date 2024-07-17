@@ -22,35 +22,36 @@ const{Browser}=require("selenium-webdriver");
       console.log("Logo is NOT displayed! \n");
     }
 
-  // Find and log navbar text
-  let navBarText = await driver.findElement(By.className("navbar")).getText();
-  console.log(navBarText+"\n");
+    // Find and log navbar text
+    let navBarText = await driver.findElement(By.className("navbar")).getText();
+    console.log(navBarText+"\n");
 
-  // About Us
-  let aboutUsLink = await driver.findElement(By.linkText("About Us"));
-  await driver.wait(until.elementIsVisible(aboutUsLink), 5000); // Ensure the link is visible
-  await aboutUsLink.click();
+    // About Us
+    let aboutUsLink = await driver.findElement(By.linkText("About Us"));
+    await driver.wait(until.elementIsVisible(aboutUsLink), 5000); // Ensure the link is visible
+    await aboutUsLink.click();
 
-  // Advisors and Patrons Page
-  let personnel = await driver.findElement(By.linkText("Advisors and Patrons"));
-  await driver.wait(until.elementIsVisible(personnel), 5000); // Ensure the link is visible before clicking
-  await personnel.click();
+    // Advisors and Patrons Page
+    let personnel = await driver.findElement(By.linkText("Advisors and Patrons"));
+    await driver.wait(until.elementIsVisible(personnel), 5000); // Ensure the link is visible before clicking
+    await personnel.click();
 
-  let advisors = await driver.findElements(By.css(".media-body h4"));
-  await driver.wait(until.elementIsVisible(advisors[0]), 5000); // Wait for at least the first advisor to be visible
+    let advisors = await driver.findElements(By.css(".media-body h4"));
+    await driver.wait(until.elementIsVisible(advisors[0]), 5000); // Wait for at least the first advisor to be visible
 
-  let advisorsTexts = "";
-  for (let advisor of advisors) {  // Loop through the advisors and get their text
-    let text = await advisor.getText();
-    advisorsTexts +="\n\t"+ text; // Add the text to the array
+    let advisorsTexts = "";
+    for (let advisor of advisors) {  // Loop through the advisors and get their text
+      let text = await advisor.getText();
+      advisorsTexts +="\n\t"+ text; // Add the text to the array
+    }
+
+    let currentURL = await driver.getCurrentUrl();
+    console.log("Current URL: ", currentURL+"\n");
+    console.log("Advisors and Patrons:", advisorsTexts+"\n");
+
+  } 
+  catch (error) {
+    console.log("Error found! \n", error);
   }
-
-  let currentURL = await driver.getCurrentUrl();
-  console.log("Current URL: ", currentURL+"\n");
-  console.log("Advisors and Patrons:", advisorsTexts+"\n");
-
-} catch (error) {
-  console.log("Error found! \n", error);
-}
-  await driver.quit();
+    await driver.quit();
 }())
