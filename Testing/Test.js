@@ -59,7 +59,7 @@ const{Browser}=require("selenium-webdriver");
     await workshops.click();
     
     // Get the text of the upcoming workshops from workshops page
-    let workshopTexts=await driver.findElements(By.css("h4"));
+    let workshopTexts=await driver.findElements(By.css(".blog-info h4"));
     await driver.wait(until.elementIsVisible(workshopTexts[0]), 5000); 
 
     let upcomingWorkshops = [];
