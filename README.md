@@ -58,5 +58,6 @@ The fourth test will check:
 - The footer of the page 
 - The Social Media links <br/>
 
-The footer of the page is checked for its presence. The test will display a boolean value to confirm if it is displayed. <br/>
+The footer of the page is checked for its presence in the "Internship Positions" page whose link in "Join Us" section.<br/>
+The test will display a boolean value to confirm if it is displayed. <br/>
 The social media links in the footer are displayed in the console.

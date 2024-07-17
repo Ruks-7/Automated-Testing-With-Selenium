@@ -69,6 +69,17 @@ const{Browser}=require("selenium-webdriver");
     }
     console.log("Upcoming Workshops: ",upcomingWorkshops.join(", ")+"\n");
 
+    let joinUs=await driver.findElement(By.linkText("Join Us"));
+    await driver.wait(until.elementIsVisible(joinUs),5000);
+    await joinUs.click();
+
+    let internship=await driver.findElement(By.linkText("Internship Positions"));
+    await driver.wait(until.elementIsVisible(internship),5000);
+    await internship.click();
+    let url=await driver.getCurrentUrl();
+    assert.equal(url, "https://www.thesparksfoundationsingapore.org/join-us/internship-positions/");
+    console.log("Successfully navigated to the Internships and Positions page! \n");
+
     //Footer
     let footer=await driver.findElement(By.className("footer"));
     let footerAssert=await footer.isDisplayed();
