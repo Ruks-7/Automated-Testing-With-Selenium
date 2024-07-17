@@ -44,3 +44,11 @@ The second test will check:
 
 The navigation bar displays the list of links on the section. The test will click on the "Advisors and Patrons" link found in the "About Us" section.<br />
 Upon navigating to the page, the url of the page and all the advisors and patrons are displayed in the console.
+
+### 3. Third Test
+The third test will check:
+- The "Programs" link
+- The "Workshops" page <br/>
+
+The test will click on the "Workshops" link found in the "Programs" section.<br />
+Upon navigating to the page, all the upcoming workshops are displayed in the console.
