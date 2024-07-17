@@ -69,6 +69,20 @@ const{Browser}=require("selenium-webdriver");
     }
     console.log("Upcoming Workshops: ",upcomingWorkshops.join(", ")+"\n");
 
+    //Footer
+    let footer=await driver.findElement(By.className("footer"));
+    let footerAssert=await footer.isDisplayed();
+    console.log("Footer is displayed: ", footerAssert+"\n");
+    
+    // Social Media Info in the footer
+    let socialMedia = await driver.findElements(By.css(".top-header-agile-right ul li a"));
+    let socialMediaLinks = " ";
+    for (let i = 0; i < socialMedia.length; i++) {
+      let link = await socialMedia[i].getAttribute("href");
+      socialMediaLinks += "\n\t" + link;
+    }
+    console.log("Social Media Links: ", socialMediaLinks);
+
   } 
   catch (error) {
     console.log("Error found! \n", error);

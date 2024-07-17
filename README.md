@@ -52,3 +52,11 @@ The third test will check:
 
 The test will click on the "Workshops" link found in the "Programs" section.<br />
 Upon navigating to the page, all the upcoming workshops are displayed in the console.
+
+### 4. Fourth Test
+The fourth test will check:
+- The footer of the page 
+- The Social Media links <br/>
+
+The footer of the page is checked for its presence. The test will display a boolean value to confirm if it is displayed. <br/>
+The social media links in the footer are displayed in the console.
