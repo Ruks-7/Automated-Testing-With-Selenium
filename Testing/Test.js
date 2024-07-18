@@ -58,7 +58,7 @@ const{Browser}=require("selenium-webdriver");
     await driver.wait(until.elementIsVisible(workshops),5000);
     await workshops.click();
     
-    // Get the text of the upcoming workshops from workshops page
+    // Upcoming workshops
     let workshopTexts=await driver.findElements(By.css(".blog-info h4"));
     await driver.wait(until.elementIsVisible(workshopTexts[0]), 5000); 
 
@@ -69,9 +69,12 @@ const{Browser}=require("selenium-webdriver");
     }
     console.log("Upcoming Workshops: ",upcomingWorkshops.join(", ")+"\n");
 
+    async function joinUs(){
     let joinUs=await driver.findElement(By.linkText("Join Us"));
     await driver.wait(until.elementIsVisible(joinUs),5000);
     await joinUs.click();
+    }
+    await joinUs();
 
     // Internships and Positions
     let internship=await driver.findElement(By.linkText("Internship Positions"));
@@ -107,7 +110,20 @@ const{Browser}=require("selenium-webdriver");
     let heading=await driver.findElement(By.css("h3 span"));
     await driver.wait(until.elementIsVisible(heading), 5000);
     let headingText=await heading.getText();
-    console.log("Heading for Software & App page: ",headingText);
+    console.log("Heading for Software & App page: ",headingText+"\n");
+
+    //Form
+    await joinUs();
+    let ambassadors=await driver.findElement(By.linkText("Brand Ambassador"));
+    await driver.wait(until.elementIsVisible(ambassadors), 5000);
+    await ambassadors.click();
+
+    let form=await driver.findElement(By.css("form"));
+    await driver.wait(until.elementIsVisible(form),5000);
+    let formAssert=await form.isDisplayed();
+    assert.equal(formAssert, true);
+    console.log("Form is displayed!");
+
 
   } 
   catch (error) {

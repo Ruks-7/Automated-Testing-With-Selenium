@@ -7,12 +7,12 @@ The test script has to check atleast five pages for the following:
 2. The logo on the page
 3. The navigation bar on the page
 4. If a footer exists on the page
-5. If the page has a form
-6. The contact information
-7. If the page has any images
-8. If the page has any videos
-9. Conduct and policy section
-10. Internship programs
+5. Advisors and Patrons page
+6. The social media links
+7. Upcoming workshops of the page
+8. Internship and programs
+9. Software and App page
+10. Presence of a form
 
 ## 1. Setting up the project
 To set up the project, you have to ensure that you have the following installed on your machine:
@@ -64,7 +64,8 @@ The social media links in the footer are displayed in the console.
 
 ### 5. Fifth Test
 The fifth test will check:
-- The "Software & App" page <br/>
+- The "Software & App" page 
+- Presence of a form <br/>
 
 The test will navigate to the "Software & App" page in the "LINKS" section.<br/> 
-The script will be obtain the heading of the page and display in the console.
+The script will be obtain the heading of the page and display in the console. Thereafter, it will navigate to the "Brand Ambassadors" page to search for a form.
