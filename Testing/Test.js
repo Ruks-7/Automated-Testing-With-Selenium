@@ -73,6 +73,7 @@ const{Browser}=require("selenium-webdriver");
     await driver.wait(until.elementIsVisible(joinUs),5000);
     await joinUs.click();
 
+    // Internships and Positions
     let internship=await driver.findElement(By.linkText("Internship Positions"));
     await driver.wait(until.elementIsVisible(internship),5000);
     await internship.click();
@@ -92,7 +93,21 @@ const{Browser}=require("selenium-webdriver");
       let link = await socialMedia[i].getAttribute("href");
       socialMediaLinks += "\n\t" + link;
     }
-    console.log("Social Media Links: ", socialMediaLinks);
+    console.log("Social Media Links: ", socialMediaLinks+"\n");
+
+    //LINKS Page
+    let links=await driver.findElement(By.linkText("LINKS"));
+    await driver.wait(until.elementIsVisible(links),5000);
+    await links.click();
+
+    let software=await driver.findElement(By.linkText("Software & App"));
+    await driver.wait(until.elementIsVisible(software), 5000);
+    await software.click();
+
+    let heading=await driver.findElement(By.css("h3 span"));
+    await driver.wait(until.elementIsVisible(heading), 5000);
+    let headingText=await heading.getText();
+    console.log("Heading for Software & App page: ",headingText);
 
   } 
   catch (error) {

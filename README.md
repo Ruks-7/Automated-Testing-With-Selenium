@@ -61,3 +61,10 @@ The fourth test will check:
 The footer of the page is checked for its presence in the "Internship Positions" page whose link in "Join Us" section.<br/>
 The test will display a boolean value to confirm if it is displayed. <br/>
 The social media links in the footer are displayed in the console.
+
+### 5. Fifth Test
+The fifth test will check:
+- The "Software & App" page <br/>
+
+The test will navigate to the "Software & App" page in the "LINKS" section.<br/> 
+The script will be obtain the heading of the page and display in the console.
